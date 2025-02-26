@@ -1,1 +1,1 @@
-# ngamaste react course
+# Namaste React
