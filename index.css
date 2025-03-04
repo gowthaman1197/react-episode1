@@ -1,3 +1,60 @@
-#heading {
-  color: red;
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  width: 150px;
+}
+.nav-items > ul {
+  display: flex;
+  list-style-type: none;
+}
+.nav-items > ul > li {
+  padding: 10px 20px;
+}
+.search {
+  padding: 5px 10px;
+  margin: 5px 10px;
+}
+.filter button {
+  margin: 10px 2px;
+  padding: 5px;
+  background-color: red;
+  border: 1px solid red;
+  color: #fff;
+}
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.res-card {
+  width: 200px;
+  height: 500px;
+  padding: 10px;
+}
+.res-card:hover {
+  cursor: pointer;
+  border: 1px solid #ddd;
+  width: 200px;
+}
+.food-img {
+  max-width: 100%;
+  height: auto;
+}
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.shimmer-card {
+  margin: 20px;
+  width: 200px;
+  height: 500px;
+  background-color: #f0f0f0;
+}
+.login {
+  padding: 0 20px;
+  cursor: pointer;
+}
+.footer {
+  text-align: center;
 }
