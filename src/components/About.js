@@ -2,6 +2,11 @@ import User from "./User";
 import { Component } from "react";
 
 class About extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {}
   render() {
     return (
       <div className="container">

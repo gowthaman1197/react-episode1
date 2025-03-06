@@ -1,27 +1,20 @@
-import { Component } from "react";
+import React from "react";
+import useRestaurantMenu from "../utils/useRestaurantMenu";
 
-class User extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      count: 0,
-    };
+const User = () => {
+  const [users] = useRestaurantMenu(
+    "https://api.github.com/users/gowthaman1197"
+  );
+  if (users === null) {
+    return <p>Loading...</p>;
   }
-  render() {
-    return (
-      <>
-        <h1>I am user - {this.props.name}</h1>
-        <p>The count value: {this.state.count}</p>
-        <button
-          onClick={() =>
-            this.setState((preState) => ({ count: preState.count + 1 }))
-          }
-        >
-          Click
-        </button>
-      </>
-    );
-  }
-}
+  return (
+    <>
+      <img src={users.avatar_url} />
+      <h1>{users.name}</h1>
+      <p>{users.bio}</p>
+    </>
+  );
+};
 
 export default User;
